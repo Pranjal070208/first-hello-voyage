@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
           {/* LEFT CONTENT */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 drop-shadow-[0_0_20px_rgba(255,215,0,0.2)]">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-flow drop-shadow-[0_0_20px_rgba(255,255,255,0.15)]">
                 Empowering the Next Generation of Global Innovators
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl">
@@ -26,13 +26,13 @@ const HomePage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="/about#competition"
-                className="px-8 py-4 rounded-full font-semibold text-lg text-gray-900 bg-gradient-to-r from-yellow-300 to-yellow-500 shadow-lg hover:shadow-[0_0_25px_rgba(255,215,0,0.4)] hover:scale-105 transition-all text-center"
+                className="px-8 py-4 rounded-full font-semibold text-lg text-gray-900 bg-gradient-flow shadow-lg hover:shadow-[0_0_25px_rgba(255,255,200,0.4)] hover:scale-105 transition-all text-center"
               >
                 Join the Challenge
               </a>
               <a
                 href="/about#competition"
-                className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-yellow-400 text-yellow-300 hover:bg-yellow-300 hover:text-gray-900 transition-all hover:shadow-[0_0_25px_rgba(255,215,0,0.3)] text-center"
+                className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-yellow-300 text-transparent bg-clip-text bg-gradient-flow hover:bg-yellow-200/10 hover:text-gray-900 transition-all hover:shadow-[0_0_25px_rgba(255,255,200,0.3)] text-center"
               >
                 Submit Your Idea
               </a>
@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
       {/* WELCOME BOX */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 animate-fade-in">
         <div className="bg-white/10 backdrop-blur-xl border border-yellow-300/20 rounded-2xl p-10 shadow-[0_0_30px_rgba(255,215,0,0.15)] hover:shadow-[0_0_45px_rgba(255,215,0,0.25)] transition-all">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-yellow-300">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow">
             Welcome to IdeaForge Global (IFG)
           </h2>
           <p className="text-gray-200 text-base sm:text-lg leading-relaxed mb-4">
@@ -86,7 +86,7 @@ const HomePage: React.FC = () => {
       <section className="bg-gradient-to-t from-[#0A1833]/90 to-transparent py-16 border-t border-yellow-400/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-10 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all">
-            <h2 className="text-3xl sm:text-4xl font-bold text-yellow-300 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow">
               The Global Youth Entrepreneurship Challenge (GYEC)
             </h2>
             <p className="text-gray-200 text-base sm:text-lg leading-relaxed mb-4">
@@ -116,7 +116,9 @@ const HomePage: React.FC = () => {
                   key={index}
                   className="flex items-start space-x-2 p-4 bg-gradient-to-r from-[#0A1833]/70 to-[#132A4F]/70 rounded-xl border border-yellow-400/20 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(255,215,0,0.15)] transition-all"
                 >
-                  <span className="text-yellow-300 text-lg font-semibold">✓</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-flow text-lg font-semibold">
+                    ✓
+                  </span>
                   <span>{item}</span>
                 </div>
               ))}

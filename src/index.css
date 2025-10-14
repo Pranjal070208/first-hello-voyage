@@ -304,3 +304,23 @@ footer a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #0056b3 0%, #0099cc 100%);
 }
+/* 🌟 Flowing Gold Gradient Animation */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-flow {
+  background: linear-gradient(90deg, #ffffff, #fff8c5, #ffd700, #fff8c5, #ffffff);
+  background-size: 400% 400%;
+  animation: gradient-flow 6s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

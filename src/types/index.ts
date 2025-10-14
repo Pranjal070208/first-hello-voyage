@@ -108,6 +108,7 @@ export interface MarketplaceProduct {
   description: string;
   price: number;
   image_url?: string;
+  product_url?: string;
   product_link?: string;
   category: string;
   status: 'active' | 'sold' | 'inactive';

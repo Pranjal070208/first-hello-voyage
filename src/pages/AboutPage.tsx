@@ -1,13 +1,21 @@
 import React from 'react';
 import CompetitionSignup from '../components/CompetitionSignup';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const AboutPage: React.FC = () => {
+  const storySection = useScrollAnimation();
+  const uniqueSection = useScrollAnimation();
+  const competitionSection = useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-gray-50 pt-24">
       <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-6 animate-gradient-shift">
+          <div 
+            ref={storySection.elementRef}
+            className={`text-center mb-12 sm:mb-16 scroll-reveal ${storySection.isVisible ? 'visible' : ''}`}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-6 animate-gradient-shift animate-fade-down">
               Our Story
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto mb-6">
@@ -54,30 +62,33 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 mb-16">
+          <div 
+            ref={uniqueSection.elementRef}
+            className={`bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 mb-16 scroll-reveal ${uniqueSection.isVisible ? 'visible' : ''}`}
+          >
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">What Makes IFG Unique</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className={`bg-white p-6 rounded-xl shadow-sm hover-lift ${uniqueSection.isVisible ? 'animate-zoom-in stagger-1' : ''}`}>
                 <h4 className="font-bold text-lg mb-2">Completely Student-Led</h4>
                 <p className="text-gray-600">Built by students, for students</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className={`bg-white p-6 rounded-xl shadow-sm hover-lift ${uniqueSection.isVisible ? 'animate-zoom-in stagger-2' : ''}`}>
                 <h4 className="font-bold text-lg mb-2">Global Reach</h4>
                 <p className="text-gray-600">Connecting innovators worldwide</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className={`bg-white p-6 rounded-xl shadow-sm hover-lift ${uniqueSection.isVisible ? 'animate-zoom-in stagger-3' : ''}`}>
                 <h4 className="font-bold text-lg mb-2">Accessible to All</h4>
                 <p className="text-gray-600">Free participation for everyone</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className={`bg-white p-6 rounded-xl shadow-sm hover-lift ${uniqueSection.isVisible ? 'animate-zoom-in stagger-4' : ''}`}>
                 <h4 className="font-bold text-lg mb-2">Recognition That Matters</h4>
                 <p className="text-gray-600">Certificates, LORs, and awards</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className={`bg-white p-6 rounded-xl shadow-sm hover-lift ${uniqueSection.isVisible ? 'animate-zoom-in stagger-5' : ''}`}>
                 <h4 className="font-bold text-lg mb-2">Partnerships with Institutions</h4>
                 <p className="text-gray-600">Collaborating with leading organizations</p>
               </div>
-              <div className="bg-white p-6 rounded-xl shadow-sm">
+              <div className={`bg-white p-6 rounded-xl shadow-sm hover-lift ${uniqueSection.isVisible ? 'animate-zoom-in stagger-6' : ''}`}>
                 <h4 className="font-bold text-lg mb-2">Mentorship & Support</h4>
                 <p className="text-gray-600">Guidance from industry experts</p>
               </div>
@@ -105,8 +116,11 @@ const AboutPage: React.FC = () => {
 
       <section id="competition" className="py-12 sm:py-20" style={{ backgroundColor: '#FAEBD7' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-6 animate-gradient-shift">
+          <div 
+            ref={competitionSection.elementRef}
+            className={`text-center mb-12 sm:mb-16 scroll-reveal ${competitionSection.isVisible ? 'visible' : ''}`}
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text mb-6 animate-gradient-shift animate-fade-down">
               Global Youth Entrepreneurship Challenge (GYEC)
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto">

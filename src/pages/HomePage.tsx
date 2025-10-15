@@ -1,4 +1,5 @@
 import React from "react";
+import ideaforgeLogo from "@/assets/ideaforge-logo.png";
 
 const HomePage: React.FC = () => {
   return (
@@ -43,8 +44,8 @@ const HomePage: React.FC = () => {
           <div className="relative animate-slide-in-right">
             <div className="floating-element">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-                alt="Young entrepreneurs collaborating"
+                src={ideaforgeLogo}
+                alt="IdeaForge Global logo - lightbulb with flame representing innovation"
                 className="rounded-2xl shadow-[0_0_25px_rgba(255,215,0,0.2)] w-full h-auto object-cover hover:scale-110 hover:rotate-1 transition-all duration-700"
               />
             </div>

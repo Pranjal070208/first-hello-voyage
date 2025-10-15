@@ -29,7 +29,7 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 sm:gap-16 items-center mb-16">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-12 md:mb-16">
             <div className="animate-slide-in-left">
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
@@ -38,7 +38,7 @@ const AboutPage: React.FC = () => {
               />
             </div>
 
-            <div className="space-y-8 animate-slide-in-right">
+            <div className="space-y-6 md:space-y-8 animate-slide-in-right">
               <div>
                 <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-base sm:text-lg text-gray-600">
@@ -64,10 +64,10 @@ const AboutPage: React.FC = () => {
 
           <div 
             ref={uniqueSection.elementRef}
-            className={`bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 mb-16 scroll-reveal ${uniqueSection.isVisible ? 'visible' : ''}`}
+            className={`bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 md:p-8 mb-12 md:mb-16 scroll-reveal ${uniqueSection.isVisible ? 'visible' : ''}`}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 text-center">What Makes IFG Unique</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               <div className={`bg-white p-6 rounded-xl shadow-sm hover-lift ${uniqueSection.isVisible ? 'animate-zoom-in stagger-1' : ''}`}>
                 <h4 className="font-bold text-lg mb-2">Completely Student-Led</h4>
                 <p className="text-gray-600">Built by students, for students</p>
@@ -95,14 +95,14 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Our Team</h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We are a passionate collective of students working together to create world-class opportunities for youth. Everyone at IFG shares one goal — to make the next generation of entrepreneurs unstoppable.
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl p-8 text-center">
+          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-2xl p-6 md:p-8 text-center">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">Why We Exist</h3>
             <p className="text-lg max-w-3xl mx-auto mb-6">
               We believe innovation should not be limited by resources, geography, or privilege. Every student — no matter where they come from — deserves a place to share their vision and be heard.
@@ -128,8 +128,8 @@ const AboutPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start mb-12">
-            <div className="space-y-6 sm:space-y-8">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start mb-12">
+            <div className="space-y-4 md:space-y-6 lg:space-y-8">
               <div className="card-3d bg-white p-6 sm:p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow hover-lift animate-slide-in-left">
                 <h3 className="text-xl sm:text-2xl font-bold mb-4">Competition Highlights</h3>
                 <ul className="space-y-3 text-gray-600">
@@ -191,7 +191,7 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 rounded-2xl p-8 text-center">
+          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 rounded-2xl p-6 md:p-8 text-center">
             <h3 className="text-2xl sm:text-3xl font-bold mb-4">
               Your idea has the power to change the world — all it needs is a spark.
             </h3>

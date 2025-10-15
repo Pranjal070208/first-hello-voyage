@@ -9,11 +9,11 @@ const HomePage: React.FC = () => {
     >
       {/* HERO SECTION */}
       <div className="flex-grow flex items-center">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 md:gap-12 items-center py-16 md:py-24">
           {/* LEFT CONTENT */}
-          <div className="space-y-8 animate-slide-in-left">
-            <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-flow drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] animate-fade-down">
+            <div className="space-y-6 md:space-y-8 animate-slide-in-left">
+              <div className="space-y-3 md:space-y-4">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-flow drop-shadow-[0_0_20px_rgba(255,255,255,0.15)] animate-fade-down">
                 Empowering the Next Generation of Global Innovators
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl animate-fade-up stagger-1">
@@ -59,8 +59,8 @@ const HomePage: React.FC = () => {
       </div>
 
       {/* WELCOME BOX */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 animate-zoom-in stagger-4">
-        <div className="bg-white/10 backdrop-blur-xl border border-yellow-300/20 rounded-2xl p-10 shadow-[0_0_30px_rgba(255,215,0,0.15)] hover:shadow-[0_0_45px_rgba(255,215,0,0.25)] hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-20 animate-zoom-in stagger-4">
+        <div className="bg-white/10 backdrop-blur-xl border border-yellow-300/20 rounded-2xl p-6 md:p-10 shadow-[0_0_30px_rgba(255,215,0,0.15)] hover:shadow-[0_0_45px_rgba(255,215,0,0.25)] hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow animate-fade-down">
             Welcome to IdeaForge Global (IFG)
           </h2>
@@ -84,9 +84,9 @@ const HomePage: React.FC = () => {
       </div>
 
       {/* GYEC SECTION */}
-      <section className="bg-gradient-to-t from-[#0A1833]/90 to-transparent py-16 border-t border-yellow-400/10">
+      <section className="bg-gradient-to-t from-[#0A1833]/90 to-transparent py-12 md:py-16 border-t border-yellow-400/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-10 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] hover:scale-[1.01] transition-all duration-500 animate-fade-up stagger-5">
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6 md:p-10 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] hover:scale-[1.01] transition-all duration-500 animate-fade-up stagger-5">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow animate-fade-down">
               The Global Youth Entrepreneurship Challenge (GYEC)
             </h2>
@@ -104,7 +104,7 @@ const HomePage: React.FC = () => {
               make a difference.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-200 text-sm sm:text-base">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-gray-200 text-sm sm:text-base">
               {[
                 "Open to students worldwide (ages 15–22)",
                 "Individual or team participation (up to 4 members)",

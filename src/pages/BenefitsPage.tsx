@@ -31,8 +31,8 @@ const BenefitsPage: React.FC = () => {
             ref={studentsSection.elementRef}
             className="mb-16"
           >
-            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center scroll-reveal ${studentsSection.isVisible ? 'visible' : ''}`}>For Students</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center scroll-reveal ${studentsSection.isVisible ? 'visible' : ''}`}>For Students</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
               {[
                 { icon: '🌍', title: 'Showcase Innovation Globally', description: 'Present your ideas on an international platform' },
                 { icon: '📜', title: 'Certificates and LORs', description: 'Receive official recognition for your participation' },
@@ -53,8 +53,8 @@ const BenefitsPage: React.FC = () => {
             ref={winnersSection.elementRef}
             className="mb-16"
           >
-            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center scroll-reveal ${winnersSection.isVisible ? 'visible' : ''}`}>For Winners</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center scroll-reveal ${winnersSection.isVisible ? 'visible' : ''}`}>For Winners</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
               {[
                 { icon: '🏆', title: 'Certificates of Excellence', description: 'Official recognition of your achievement' },
                 { icon: '🎁', title: 'Gift Cards', description: 'Amazon/Flipkart gift cards as rewards' },
@@ -77,8 +77,8 @@ const BenefitsPage: React.FC = () => {
             ref={membersSection.elementRef}
             className="mb-16"
           >
-            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center scroll-reveal ${membersSection.isVisible ? 'visible' : ''}`}>For Active Members</h3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center scroll-reveal ${membersSection.isVisible ? 'visible' : ''}`}>For Active Members</h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
               {[
                 { icon: '💼', title: 'Leadership Experience', description: 'Real-world leadership opportunities' },
                 { icon: '⭐', title: 'Performance Certificates', description: 'Recognition for your contributions' },
@@ -98,8 +98,8 @@ const BenefitsPage: React.FC = () => {
             ref={schoolsSection.elementRef}
             className="mb-16"
           >
-            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center scroll-reveal ${schoolsSection.isVisible ? 'visible' : ''}`}>For Schools & Universities</h3>
-            <div className="grid md:grid-cols-3 gap-8">
+            <h3 className={`text-2xl sm:text-3xl font-bold text-gray-900 mb-6 md:mb-8 text-center scroll-reveal ${schoolsSection.isVisible ? 'visible' : ''}`}>For Schools & Universities</h3>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
               {[
                 { icon: '🎓', title: 'Youth Innovation Partner', description: 'Recognition as a partner institution' },
                 { icon: '🤝', title: 'Collaboration Access', description: 'Direct collaboration opportunities with IFG' },
@@ -128,13 +128,13 @@ const BenefitsPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-12 sm:py-20 hero-gradient text-white">
+      <section className="py-12 md:py-16 lg:py-20 hero-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div 
             ref={ctaSection.elementRef}
             className={`scroll-reveal ${ctaSection.isVisible ? 'visible animate-bounce-in' : ''}`}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 animate-gradient-shift bg-gradient-to-r from-white via-yellow-300 to-white bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-gradient-shift bg-gradient-to-r from-white via-yellow-300 to-white bg-clip-text text-transparent">
               Your Time is Now
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fade-in stagger-2">

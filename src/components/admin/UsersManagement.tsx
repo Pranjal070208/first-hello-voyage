@@ -58,14 +58,34 @@ export const UsersManagement: React.FC = () => {
 
   const fetchUsers = async () => {
     try {
-      const { data, error } = await supabase
+      // First get all profiles
+      const { data: profilesData, error: profilesError } = await supabase
         .from('profiles')
         .select('*')
         .order('created_at', { ascending: false });
 
-      if (error) throw error;
-      setUsers(data || []);
-      setFilteredUsers(data || []);
+      if (profilesError) throw profilesError;
+
+      // Then get auth users to fill in missing emails
+      const { data: { users: authUsers }, error: authError } = await supabase.auth.admin.listUsers();
+      
+      if (authError) {
+        console.error('Error fetching auth users:', authError);
+        setUsers(profilesData || []);
+        setFilteredUsers(profilesData || []);
+      } else {
+        // Merge profile data with auth data
+        const mergedUsers = profilesData?.map(profile => {
+          const authUser = authUsers?.find(u => u.id === profile.id);
+          return {
+            ...profile,
+            email: profile.email || authUser?.email || null,
+          };
+        }) || [];
+
+        setUsers(mergedUsers);
+        setFilteredUsers(mergedUsers);
+      }
     } catch (error) {
       console.error('Error fetching users:', error);
     } finally {

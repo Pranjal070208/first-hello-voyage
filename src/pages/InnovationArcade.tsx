@@ -10,6 +10,7 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { supabase } from '../integrations/supabase/client';
 
 interface ArcadeItem {
   id: string;
@@ -40,26 +41,29 @@ const InnovationArcade: React.FC = () => {
   const fetchArcadeData = async () => {
     setLoading(true);
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      // Fetch competitions from database
+      const { data: competitionsData, error: competitionsError } = await supabase
+        .from('arcade_competitions')
+        .select('*')
+        .eq('status', 'active')
+        .order('created_at', { ascending: false });
 
+      if (competitionsError) throw competitionsError;
+
+      const formattedCompetitions = competitionsData?.map(comp => ({
+        id: comp.id,
+        title: comp.title,
+        description: comp.description || '',
+        category: comp.category,
+        image_url: comp.image_url || undefined,
+        created_at: comp.created_at || new Date().toISOString(),
+        registrationLink: comp.registration_link || undefined,
+      })) || [];
+
+      setCompetitions(formattedCompetitions);
       setProjects([]);
       setSkillDrops([]);
       setCourses([]);
-
-      // ✅ GYEC competition entry
-      setCompetitions([
-        {
-          id: 'gyec-2025',
-          title: 'Global Youth Entrepreneurship Challenge (GYEC)',
-          description:
-            'A global innovation challenge empowering young entrepreneurs to turn ideas into impactful ventures. Open for all students worldwide!',
-          category: 'Entrepreneurship',
-          image_url:
-            'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80',
-          created_at: new Date().toISOString(),
-          registrationLink: '/about#competition',
-        },
-      ]);
     } catch (error) {
       console.error('Error fetching arcade data:', error);
     } finally {
@@ -220,12 +224,20 @@ const InnovationArcade: React.FC = () => {
                         {item.category}
                       </span>
                       {item.registrationLink && (
-                        <button
-                          onClick={handleGoToCompetition}
+                        <a
+                          href={item.registrationLink}
+                          target={item.registrationLink.startsWith('http') ? '_blank' : undefined}
+                          rel={item.registrationLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+                          onClick={(e) => {
+                            if (item.registrationLink === '/about#competition') {
+                              e.preventDefault();
+                              handleGoToCompetition();
+                            }
+                          }}
                           className="flex items-center text-sm font-semibold text-yellow-300 hover:text-yellow-200 transition-all"
                         >
                           Register <ExternalLink className="w-4 h-4 ml-1" />
-                        </button>
+                        </a>
                       )}
                     </div>
                   </div>

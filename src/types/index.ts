@@ -22,6 +22,7 @@ export interface Profile {
   avatar_url?: string;
   bio?: string;
   website?: string;
+  phone_number?: string;
   created_at: string;
   updated_at: string;
 }
@@ -76,13 +77,17 @@ export interface ChatMessage {
 export interface UserCourse {
   id: string;
   user_id: string;
+  course_id: string;
   course_title: string;
   course_description?: string;
-  status: 'enrolled' | 'in_progress' | 'completed' | 'dropped';
-  progress_percentage: number;
-  enrolled_date: string;
+  status: 'enrolled' | 'in_progress' | 'completed' | 'dropped' | 'not_started';
+  progress?: number;
+  progress_percentage?: number;
+  enrolled_date?: string;
+  enrolled_at?: string;
   completed_date?: string;
-  certificate_issued: boolean;
+  completed_at?: string;
+  certificate_issued?: boolean;
   created_at: string;
   updated_at: string;
 }

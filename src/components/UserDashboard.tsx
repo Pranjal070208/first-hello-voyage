@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { User, Trophy, BookOpen, Award, Calendar, Download, MessageCircle, Settings, LogOut, ChevronRight, Star, Clock, CheckCircle, Target, ArrowLeft, CreditCard as Edit3, Save, X, ShoppingCart, Coins } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { User, Trophy, BookOpen, Award, Calendar, Download, MessageCircle, Settings, LogOut, Star, CheckCircle, Target, ArrowLeft, CreditCard as Edit3, Save, X, ShoppingCart, Coins } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { getUserAchievements, getUserCourses, getUserCompetitionEntries, updateProfile, getUserProducts, getUserTokens } from '../lib/supabase';
 import { UserAchievement, UserCourse, CompetitionEntry, MarketplaceProduct, UserTokens } from '../types';
@@ -8,7 +8,6 @@ import ChatBot from './ChatBot';
 
 const UserDashboard: React.FC = () => {
   const { user, profile, signOut, refreshProfile } = useAuth();
-  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
   const [achievements, setAchievements] = useState<UserAchievement[]>([]);
   const [courses, setCourses] = useState<UserCourse[]>([]);
@@ -427,7 +426,7 @@ const UserDashboard: React.FC = () => {
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                       <div className="flex items-center space-x-1">
                         <Calendar className="w-4 h-4" />
-                        <span>Submitted {new Date(competition.created_at).toLocaleDateString()}</span>
+                        <span>Submitted {competition.created_at ? new Date(competition.created_at).toLocaleDateString() : 'N/A'}</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <Target className="w-4 h-4" />
@@ -481,7 +480,7 @@ const UserDashboard: React.FC = () => {
                     <div className="flex flex-wrap gap-4 text-sm text-gray-600">
                       <div className="flex items-center space-x-1">
                         <Calendar className="w-4 h-4" />
-                        <span>Enrolled {new Date(course.enrolled_date).toLocaleDateString()}</span>
+                        <span>Enrolled {course.enrolled_at ? new Date(course.enrolled_at).toLocaleDateString() : 'N/A'}</span>
                       </div>
                       {course.certificate_issued && (
                         <div className="flex items-center space-x-1 text-green-600">
@@ -583,10 +582,10 @@ const UserDashboard: React.FC = () => {
                         <Calendar className="w-4 h-4" />
                         <span>Created {new Date(product.created_at).toLocaleDateString()}</span>
                       </div>
-                      {product.product_url && (
+                      {product.product_link && (
                         <div className="flex items-center space-x-1">
                           <Target className="w-4 h-4" />
-                          <a href={product.product_url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
+                          <a href={product.product_link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700">
                             View Product
                           </a>
                         </div>

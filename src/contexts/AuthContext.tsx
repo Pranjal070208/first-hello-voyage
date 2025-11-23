@@ -34,11 +34,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         console.error('Error fetching profile:', error);
         setProfile(null);
       } else {
-        // Ensure phone_number is included
-        setProfile({
-          ...(data as Profile),
-          phone_number: (data as any)?.phone_number || user?.user_metadata?.phone_number || null
-        });
+        setProfile(data as Profile);
       }
     } catch (err) {
       console.error('Error fetching profile:', err);

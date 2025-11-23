@@ -5,7 +5,7 @@ import { submitCompetitionEntry } from '../lib/supabase';
 import AuthModal from './AuthModal';
 
 const CompetitionSignup: React.FC = () => {
-  const { user, profile } = useAuth();
+  const { user } = useAuth();
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     team_name: '',

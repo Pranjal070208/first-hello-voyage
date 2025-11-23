@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, ShoppingCart, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import { MarketplaceProduct, UserTokens } from '../types';
+import { UserTokens } from '../types';
 
 const Marketplace: React.FC = () => {
   const { user } = useAuth();
-  const [comingSoon, setComingSoon] = useState(true);  // Control whether to show coming soon or marketplace content
+  const [comingSoon] = useState(true);  // Control whether to show coming soon or marketplace content
 
-  const [userTokens, setUserTokens] = useState<UserTokens | null>(null);
+  const [userTokens] = useState<UserTokens | null>(null);
 
   // This would be where the usual data fetching happens if we were showing products
   const fetchData = async () => {

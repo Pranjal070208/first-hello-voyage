@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { User, Trophy, BookOpen, Award, Calendar, Download, MessageCircle, Settings, LogOut, Star, CheckCircle, Target, ArrowLeft, CreditCard as Edit3, Save, X, ShoppingCart, Coins } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { User, Trophy, BookOpen, Award, Calendar, Download, MessageCircle, Settings, LogOut, Star, CheckCircle, Target, ArrowLeft, CreditCard as Edit3, Save, X, ShoppingCart, Coins, Shield } from 'lucide-react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { getUserAchievements, getUserCourses, getUserCompetitionEntries, updateProfile, getUserProducts, getUserTokens } from '../lib/supabase';
 import { UserAchievement, UserCourse, CompetitionEntry, MarketplaceProduct, UserTokens } from '../types';
+import { useAdminCheck } from '../hooks/useAdminCheck';
 import ChatBot from './ChatBot';
 
 const UserDashboard: React.FC = () => {
   const { user, profile, signOut, refreshProfile } = useAuth();
+  const { isAdmin } = useAdminCheck();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('overview');
   const [achievements, setAchievements] = useState<UserAchievement[]>([]);
   const [courses, setCourses] = useState<UserCourse[]>([]);
@@ -187,17 +190,26 @@ const UserDashboard: React.FC = () => {
     ))}
   </div>
 
-  <div className="hidden lg:block mt-8 pt-8 border-t">
+  <div className="hidden lg:block mt-8 pt-8 border-t border-gray-700">
+    {isAdmin && (
+      <button
+        onClick={() => navigate('/admin')}
+        className="flex items-center space-x-3 px-4 py-3 rounded-lg text-yellow-400 hover:bg-yellow-500 hover:text-white transition-colors w-full mb-2"
+      >
+        <Shield className="w-5 h-5" />
+        <span className="font-medium">Admin Dashboard</span>
+      </button>
+    )}
     <button
       onClick={() => setShowChatBot(true)}
-      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-600 hover:bg-gray-100 transition-colors w-full"
+      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-gray-300 hover:bg-yellow-500 hover:text-white transition-colors w-full"
     >
       <MessageCircle className="w-5 h-5" />
       <span className="font-medium">Help Desk</span>
     </button>
     <button
       onClick={signOut}
-      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors w-full mt-2"
+      className="flex items-center space-x-3 px-4 py-3 rounded-lg text-red-400 hover:bg-red-500 hover:text-white transition-colors w-full mt-2"
     >
       <LogOut className="w-5 h-5" />
       <span className="font-medium">Sign Out</span>

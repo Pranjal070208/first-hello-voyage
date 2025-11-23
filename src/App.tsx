@@ -9,6 +9,8 @@ import ContactPage from './pages/ContactPage';
 import InnovationArcade from './pages/InnovationArcade';
 import UserDashboard from './components/UserDashboard';
 import Marketplace from './components/Marketplace';
+import AdminDashboard from './pages/AdminDashboard';
+import { AdminRoute } from './components/admin/AdminRoute';
 
 // ✅ ScrollToTop Component
 const ScrollToTop: React.FC = () => {
@@ -85,6 +87,14 @@ function App() {
               }
             />
           </Route>
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <AdminDashboard />
+              </AdminRoute>
+            }
+          />
         </Routes>
       </AuthProvider>
     </BrowserRouter>

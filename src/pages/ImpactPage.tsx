@@ -115,7 +115,26 @@ const ImpactPage: React.FC = () => {
         </div>
 
         {/* Success Stories Placeholder */}
-        
+        <div className="bg-gradient-to-r from-yellow-400/10 to-blue-400/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-10 shadow-[0_0_25px_rgba(255,215,0,0.1)] text-center animate-fade-in">
+          <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow">
+            Real Impact, Real Stories
+          </h2>
+          <p className="text-gray-200 text-lg max-w-3xl mx-auto mb-8">
+            Our participants go on to launch startups, win scholarships, and become leaders in their communities. Their success stories prove that when you invest in young innovators, extraordinary things happen.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            {[
+              { stat: "50+", label: "Countries Represented" },
+              { stat: "1000+", label: "Students Impacted" },
+              { stat: "100+", label: "Ideas Brought to Life" }
+            ].map((item, index) => (
+              <div key={index} className="bg-white/10 rounded-xl p-6 border border-yellow-400/20">
+                <div className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-flow mb-2">
+                  {item.stat}
+                </div>
+                <div className="text-gray-300">{item.label}</div>
+              </div>
+            ))}
           </div>
         </div>
 

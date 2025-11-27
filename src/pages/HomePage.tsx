@@ -29,7 +29,9 @@ const HomePage: React.FC = () => {
                 Empowering the Next Generation of Innovators & Entrepreneurs
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gray-200 max-w-2xl">
-                Students from different countries come together to learn, collaborate, and build the ideas of tomorrow. IFG is a global innovation ecosystem that transforms young minds into future-ready leaders through real-world learning, mentorship, teamwork, and entrepreneurial exposure.
+                Students from different countries come together to learn, collaborate, and build the ideas of tomorrow.
+                IFG is a global innovation ecosystem that transforms young minds into future-ready leaders through
+                real-world learning, mentorship, teamwork, and entrepreneurial exposure.
               </p>
             </div>
 
@@ -49,7 +51,7 @@ const HomePage: React.FC = () => {
               </button>
               <a
                 href="/contact"
-                className="px-8 py-4 rounded-full font-semibold text-lg text-white border-2 border-yellow-400 bg-transparent hover:bg-yellow-400 hover:text-gray-900 shadow-lg hover:scale-105 transition-all text-center"
+                className="px-8 py-4 rounded-full font-semibold text-lg text-gray-900 bg-gradient-to-r from-white to-yellow-400 bg-[length:200%_200%] animate-gradient-x shadow-lg hover:shadow-[0_0_25px_rgba(255,255,200,0.4)] hover:scale-105 transition-all text-center"
               >
                 Partner With Us
               </a>

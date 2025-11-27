@@ -4,7 +4,10 @@ import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import BenefitsPage from './pages/BenefitsPage';
+import ProgramFlowPage from './pages/ProgramFlowPage';
+import CoreFeaturesPage from './pages/CoreFeaturesPage';
+import ImpactPage from './pages/ImpactPage';
+import RewardsPage from './pages/RewardsPage';
 import ContactPage from './pages/ContactPage';
 import InnovationArcade from './pages/InnovationArcade';
 import UserDashboard from './components/UserDashboard';
@@ -74,7 +77,10 @@ function App() {
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/benefits" element={<BenefitsPage />} />
+            <Route path="/program-flow" element={<ProgramFlowPage />} />
+            <Route path="/features" element={<CoreFeaturesPage />} />
+            <Route path="/impact" element={<ImpactPage />} />
+            <Route path="/rewards" element={<RewardsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/arcade" element={<InnovationArcade />} />
             <Route path="/marketplace" element={<Marketplace />} />

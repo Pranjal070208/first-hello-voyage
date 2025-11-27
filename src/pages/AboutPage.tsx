@@ -8,21 +8,39 @@ const AboutPage: React.FC = () => {
       <section className="pt-[calc(theme('spacing.24')+6rem)] sm:pt-[calc(theme('spacing.32')+6rem)] pb-10 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto w-full">
 
-          {/* OUR STORY */}
+          {/* ABOUT IFG */}
           <div className="text-center mb-12 sm:mb-16 animate-fade-in px-2">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow leading-tight">
-              Our Story
+              About IdeaForge Global (IFG)
             </h2>
             <div className="space-y-4 text-gray-200 text-base sm:text-lg max-w-3xl mx-auto">
               <p>
-                IdeaForge Global (IFG) began with a simple observation: thousands of students have brilliant ideas, but few get the chance to bring them to life.
+                IdeaForge Global is a youth-led international platform designed to help students develop real business skills through hands-on experience. Instead of learning through theory, participants explore entrepreneurship through practical challenges, expert mentorship, and global collaboration.
               </p>
-              <p>
-                Founded by students, IFG was built on a belief — that innovation should be accessible to everyone. We started small, with local idea-sharing initiatives, and have now grown into a global community connecting youth from different countries and academic backgrounds.
-              </p>
-              <p>
-                Our journey isn't about being the biggest — it's about being the most impactful.
-              </p>
+            </div>
+          </div>
+
+          {/* WHAT IFG STANDS FOR */}
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 mb-12 sm:mb-16 shadow-[0_0_25px_rgba(255,215,0,0.1)]">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow text-center">
+              What IFG Stands For
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                "Learning by doing",
+                "Building ideas with purpose",
+                "Working with peers from different countries",
+                "Gaining insights directly from industry professionals",
+                "Understanding business from a practical, real-world lens"
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-3 bg-white/5 p-4 rounded-xl border border-yellow-400/10"
+                >
+                  <span className="text-yellow-400 text-xl">✓</span>
+                  <span className="text-gray-200">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -39,13 +57,10 @@ const AboutPage: React.FC = () => {
             <div className="space-y-8 animate-slide-in-right px-2 sm:px-0">
               {[{
                 title: 'Our Vision',
-                desc: 'To empower students globally by giving them the courage, confidence, and connections to transform ideas into reality.',
+                desc: 'To build a global community where every student can explore entrepreneurship, innovate confidently, and lead with purpose.',
               }, {
                 title: 'Our Mission',
-                desc: 'To create a global ecosystem of innovation by organizing international idea challenges, mentorship programs, and student-led collaborations that inspire creativity and problem-solving.',
-              }, {
-                title: 'Our Core Values',
-                desc: 'Inclusivity • Integrity • Innovation • Collaboration • Impact',
+                desc: 'To provide practical skills, mentorship, and opportunities that help young minds grow into future innovators, founders, and leaders.',
               }].map((item, i) => (
                 <div key={i}>
                   <h3 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-flow mb-3">
@@ -64,23 +79,17 @@ const AboutPage: React.FC = () => {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
               {[{
-                title: 'Completely Student-Led',
-                desc: 'Built by students, for students',
+                title: 'A complete innovation ecosystem',
+                desc: 'Not a single event',
               }, {
-                title: 'Global Reach',
-                desc: 'Connecting innovators worldwide',
+                title: 'Focus on collaboration',
+                desc: 'Creativity and critical thinking',
               }, {
-                title: 'Accessible to All',
-                desc: 'Free participation for everyone',
+                title: 'Diverse exposure',
+                desc: 'Markets, cultures, and approaches',
               }, {
-                title: 'Recognition That Matters',
-                desc: 'Certificates, LORs, and awards',
-              }, {
-                title: 'Partnerships with Institutions',
-                desc: 'Collaborating with leading organizations',
-              }, {
-                title: 'Mentorship & Support',
-                desc: 'Guidance from industry experts',
+                title: 'Real business simulations',
+                desc: 'Making learning impactful',
               }].map((item, index) => (
                 <div
                   key={index}

@@ -51,14 +51,11 @@ const Header: React.FC = () => {
             <div className="hidden md:flex items-center space-x-8 animate-fade-in stagger-2">
               <Link to="/" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">Home</Link>
               <Link to="/about" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">About</Link>
-              <Link to="/benefits" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">Benefits</Link>
+              <Link to="/program-flow" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">Program</Link>
+              <Link to="/features" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">Features</Link>
+              <Link to="/impact" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">Impact</Link>
+              <Link to="/rewards" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">Rewards</Link>
               <Link to="/contact" className="text-gray-700 font-bold hover:text-blue-600 transition-colors hover-scale">Contact</Link>
-              <Link to="/arcade" className="text-gray-700 font-bold hover:text-yellow-600 transition-colors hover-scale whitespace-nowrap"> 
-                Innovation Arcade
-              </Link>
-              <Link to="/marketplace" className="text-gray-700 font-bold hover:text-purple-600 transition-colors hover-scale">
-                Marketplace
-              </Link>
 
               {user ? (
                 <div className="flex items-center space-x-4">
@@ -114,22 +111,11 @@ const Header: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               <Link to="/" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>Home</Link>
               <Link to="/about" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>About</Link>
-              <Link to="/benefits" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>Benefits</Link>
+              <Link to="/program-flow" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>Program</Link>
+              <Link to="/features" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>Features</Link>
+              <Link to="/impact" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>Impact</Link>
+              <Link to="/rewards" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>Rewards</Link>
               <Link to="/contact" className="block px-3 py-2 text-gray-700 font-bold" onClick={() => setIsMenuOpen(false)}>Contact</Link>
-              <Link
-                to="/arcade"
-                className="block px-3 py-2 text-gray-700 font-bold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Innovation Arcade
-              </Link>
-              <Link
-                to="/marketplace"
-                className="block px-3 py-2 text-gray-700 font-bold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Marketplace
-              </Link>
 
               {user ? (
                 <div className="px-3 py-2 space-y-2">

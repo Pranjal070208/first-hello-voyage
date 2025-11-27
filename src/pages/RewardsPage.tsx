@@ -90,17 +90,7 @@ const RewardsPage: React.FC = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center animate-fade-in">
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-10 shadow-[0_0_25px_rgba(255,215,0,0.1)]">
-            <h3 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-flow">
-              Start Earning Recognition Today
-            </h3>
-            <p className="text-gray-200 text-lg mb-6">
-              Your journey to becoming a recognized innovator begins with one step.
-            </p>
-            <a href="/about#competition" className="inline-block px-8 py-4 rounded-full font-semibold text-lg text-gray-900 bg-gradient-to-r from-yellow-400 to-white hover:scale-105 transition-all shadow-lg">
-              Register for GYEC
-            </a>
-          </div>
+          
         </div>
       </div>
     </section>;

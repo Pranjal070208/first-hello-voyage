@@ -4,9 +4,7 @@ const RewardsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow">
-            Recognition & Reward
-          </h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-flow py-[6px]">Recognition & Rewards</h1>
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Your hard work and innovation deserve to be celebrated. Here's what you can earn at IFG.
           </p>

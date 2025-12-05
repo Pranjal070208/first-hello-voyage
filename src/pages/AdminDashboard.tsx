@@ -6,9 +6,10 @@ import { Button } from '../components/ui/button';
 import { RegistrationAnalytics } from '../components/admin/RegistrationAnalytics';
 import { UsersManagement } from '../components/admin/UsersManagement';
 import { CompetitionManagement } from '../components/admin/CompetitionManagement';
+import { ContactFormsManagement } from '../components/admin/ContactFormsManagement';
 import { LogOut, Users, Trophy, FileText } from 'lucide-react';
 
-type TabType = 'registrations' | 'users' | 'competitions';
+type TabType = 'registrations' | 'users' | 'competitions' | 'reachout';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState<TabType>('registrations');
@@ -133,6 +134,16 @@ export default function AdminDashboard() {
               >
                 Competitions
               </button>
+              <button
+                onClick={() => setActiveTab('reachout')}
+                className={`py-4 px-4 border-b-2 font-medium transition-colors ${
+                  activeTab === 'reachout'
+                    ? 'border-primary text-primary'
+                    : 'border-transparent text-muted-foreground hover:text-foreground'
+                }`}
+              >
+                Reach Out
+              </button>
             </nav>
           </div>
 
@@ -140,6 +151,7 @@ export default function AdminDashboard() {
             {activeTab === 'registrations' && <RegistrationAnalytics />}
             {activeTab === 'users' && <UsersManagement />}
             {activeTab === 'competitions' && <CompetitionManagement />}
+            {activeTab === 'reachout' && <ContactFormsManagement />}
           </div>
         </div>
       </main>

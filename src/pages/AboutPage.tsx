@@ -1,5 +1,4 @@
 import React from 'react';
-import CompetitionSignup from '../components/CompetitionSignup';
 const AboutPage: React.FC = () => {
   return <div className="min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-[#020617] via-[#08122B] to-[#0A1833] text-white">
       {/* Outer container with safe padding to prevent content hiding under fixed header */}

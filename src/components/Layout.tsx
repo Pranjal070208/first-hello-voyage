@@ -87,9 +87,7 @@ const Layout: React.FC = () => {
             <div>
               <h4 className="font-bold mb-4 text-sm sm:text-base">Connect</h4>
               <div className="space-y-2">
-                <a href="https://www.linkedin.com/company/ideaforge-global" target="_blank" rel="noopener noreferrer" className="block text-gray-400 hover:text-white transition text-sm hover-scale">
-                  LinkedIn
-                </a>
+                
                 
                 <a href="mailto:ideaforgeglobal.official@gmail.com" className="block text-gray-400 hover:text-white transition text-sm hover-scale">
                   Email

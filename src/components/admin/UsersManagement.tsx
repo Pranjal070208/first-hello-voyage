@@ -66,17 +66,33 @@ export const UsersManagement: React.FC = () => {
 
       if (profilesError) throw profilesError;
 
-      // Then get auth users to fill in missing emails
-      const { data: { users: authUsers }, error: authError } = await supabase.auth.admin.listUsers();
+      // Get current session for auth header
+      const { data: { session } } = await supabase.auth.getSession();
       
-      if (authError) {
-        console.error('Error fetching auth users:', authError);
+      if (!session) {
         setUsers(profilesData || []);
         setFilteredUsers(profilesData || []);
-      } else {
+        setLoading(false);
+        return;
+      }
+
+      // Fetch auth users via edge function
+      const response = await fetch(
+        'https://wlhfqgfkkfumasutrvct.supabase.co/functions/v1/get-auth-users',
+        {
+          headers: {
+            'Authorization': `Bearer ${session.access_token}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      if (response.ok) {
+        const { users: authUsers } = await response.json();
+        
         // Merge profile data with auth data
         const mergedUsers = profilesData?.map(profile => {
-          const authUser = authUsers?.find(u => u.id === profile.id);
+          const authUser = authUsers?.find((u: { id: string; email: string }) => u.id === profile.id);
           return {
             ...profile,
             email: profile.email || authUser?.email || null,
@@ -85,6 +101,10 @@ export const UsersManagement: React.FC = () => {
 
         setUsers(mergedUsers);
         setFilteredUsers(mergedUsers);
+      } else {
+        console.error('Error fetching auth users from edge function');
+        setUsers(profilesData || []);
+        setFilteredUsers(profilesData || []);
       }
     } catch (error) {
       console.error('Error fetching users:', error);

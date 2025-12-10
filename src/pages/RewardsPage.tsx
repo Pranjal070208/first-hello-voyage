@@ -42,7 +42,7 @@ const RewardsPage: React.FC = () => {
               <div className={`w-20 h-20 rounded-full bg-gradient-to-br ${item.gradient} flex items-center justify-center text-4xl mb-6 shadow-lg`}>
                 {item.icon}
               </div>
-              <h2 className="text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-flow">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-flow break-words">
                 {item.title}
               </h2>
               <p className="text-gray-200 text-lg leading-relaxed mb-6">

@@ -17,12 +17,12 @@ const CoreFeaturesPage: React.FC = () => {
         {/* Features Grid */}
         <div className="space-y-12">
           {/* Skill Drops */}
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-left">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-left">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
                 📚
               </div>
-              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow break-words">
                 Skill Drops
               </h2>
             </div>
@@ -47,12 +47,12 @@ const CoreFeaturesPage: React.FC = () => {
           </div>
 
           {/* Business Competitions */}
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-right">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-right">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
                 🏆
               </div>
-              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow break-words">
                 Business Competitions
               </h2>
             </div>
@@ -75,12 +75,12 @@ const CoreFeaturesPage: React.FC = () => {
           </div>
 
           {/* Mini Marketplace */}
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-left">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-left">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
                 🛒
               </div>
-              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow break-words">
                 Mini Marketplace
               </h2>
             </div>
@@ -102,12 +102,12 @@ const CoreFeaturesPage: React.FC = () => {
           </div>
 
           {/* Global Collaboration Labs */}
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-right">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-right">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
                 🌐
               </div>
-              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow break-words">
                 Global Collaboration Labs
               </h2>
             </div>
@@ -130,12 +130,12 @@ const CoreFeaturesPage: React.FC = () => {
           </div>
 
           {/* Mentorship Roulette */}
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-left">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-left">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
                 🎯
               </div>
-              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow break-words">
                 Mentorship Roulette
               </h2>
             </div>
@@ -145,12 +145,12 @@ const CoreFeaturesPage: React.FC = () => {
           </div>
 
           {/* Innovation Arcade */}
-          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-right">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-3xl">
+          <div className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-6 sm:p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-right">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-2xl sm:text-3xl flex-shrink-0">
                 🎮
               </div>
-              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-flow break-words">
                 Innovation Arcade
               </h2>
             </div>

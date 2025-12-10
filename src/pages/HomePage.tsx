@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AuthModal from "@/components/AuthModal";
+import AuthModal from "../components/AuthModal";
 
 const HomePage: React.FC = () => {
   const navigate = useNavigate();

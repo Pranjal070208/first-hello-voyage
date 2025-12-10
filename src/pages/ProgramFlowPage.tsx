@@ -68,16 +68,16 @@ const ProgramFlowPage: React.FC = () => {
               className="bg-white/10 backdrop-blur-xl border border-yellow-400/20 rounded-2xl p-8 shadow-[0_0_25px_rgba(255,215,0,0.1)] hover:shadow-[0_0_40px_rgba(255,215,0,0.2)] transition-all animate-slide-in-left"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-start gap-6">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
                 <div className="flex-shrink-0">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-3xl">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-2xl sm:text-3xl">
                     {item.icon}
                   </div>
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-3">
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-3">
                     <span className="text-sm font-bold text-yellow-400">STEP {item.step}</span>
-                    <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-flow">
+                    <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-flow break-words">
                       {item.title}
                     </h2>
                   </div>

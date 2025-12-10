@@ -70,12 +70,12 @@ const ContactPage: React.FC = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-white/10 backdrop-blur-xl border border-[#FFD700]/20 rounded-2xl p-8 text-center shadow-[0_0_25px_rgba(255,215,0,0.1)]">
-            <h3 className="text-2xl font-bold mb-6 text-[#FFD700]">Contact Information</h3>
-            <div className="space-y-4 text-gray-200 text-lg">
-              <div className="flex items-center justify-center gap-3">
+          <div className="bg-white/10 backdrop-blur-xl border border-[#FFD700]/20 rounded-2xl p-6 sm:p-8 text-center shadow-[0_0_25px_rgba(255,215,0,0.1)]">
+            <h3 className="text-xl sm:text-2xl font-bold mb-6 text-[#FFD700]">Contact Information</h3>
+            <div className="space-y-4 text-gray-200 text-base sm:text-lg">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-3">
                 <span>📧 Email:</span>
-                <a href="mailto:ideaforgeglobal.official@gmail.com" className="text-[#FFD700] hover:underline">
+                <a href="mailto:ideaforgeglobal.official@gmail.com" className="text-[#FFD700] hover:underline break-all text-sm sm:text-base">
                   ideaforgeglobal.official@gmail.com
                 </a>
               </div>
